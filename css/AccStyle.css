@@ -1,113 +1,250 @@
-body{
+.navbar{
     width: 100%;
-    height: 100%;
-    background-color: #EEEEEE;
-    font-family: parkinsans;
 }
 
-.nav-bar{
-    position: fixed;
+.brand-title {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #ff6f61;
+    margin-top: 5px;
+}
+
+.brand-title span {
+    color: #ffffff;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/bg2.webp') no-repeat center center/cover;
+    background-size: cover;
+}
+
+.sign-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#signbtn{
+    color: white;
+    text-decoration: none;
+
+}
+
+#signbtn:hover{
+    color: black;
+}
+
+.about {
+    padding: 3rem 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+
+.about-images{
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+.nutrition-card, .anatomy-card, .muscles-card{
+    width: 25%;
+}
+
+.card {
+    flex: 1 1 22%;
+    position: relative;
+    border: 4px solid transparent; /* Initial border color */
+    transition: transform 0.6s ease-in;
+    overflow: hidden;
+
+}
+
+.card::before {
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
+    border: 4px solid transparent;
+    background: linear-gradient(45deg, #ccc, #fff, #bbb);
+    background-size: 400% 400%;
+    animation: background-animation 2s linear infinite;
+    z-index: -1;
+}
+
+#btn-learn{
+    width: 15%;
+    height: 8%;
+    font-size: 15px;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card:hover::before {
+    transform: scaleX(1) scaleY(1);
+}
+
+@keyframes background-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (max-width: 992px) {
+    .card {
+        flex: 1 1 45% !important; /* Cards take up 45% of the container on medium screens */
+        width: 70% !important;
+    }
+
+    .about {
+        height: auto !important; /* Allow the about section to shrink on smaller screens */
+    }
+    #hero-title{
+        font-size: 250%;
+    }
+    #hero-subtitle{
+        font-size: 100%;
+    }
+    #btn-learn{
+        width: 15%;
+        height: 8%;
+        font-size: 15px;
+    }
+    .nutrition-card,
+    .anatomy-card,
+    .muscles-card {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important; /* Center cards */
+        flex-direction: column !important; /* Stack cards vertically */
+        align-items: center !important; /* Cards take full width on medium screens */
+    }
+
+    .card-container {
+        display: flex !important;
+        justify-content: center !important; /* Center cards */
+        flex-direction: column !important; /* Stack cards vertically */
+        align-items: center !important;
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%; /* Cards take full width on small screens */
+        width: 70% !important;
+    }
+    #hero-title{
+        font-size: 250%;
+    }
+    #hero-subtitle{
+        font-size: 100%;
+    }
+
+    #about-title{
+        font-size: 220%;
+    }
+    #about-subtitle{
+        font-size: 85%;
+    }
+
+    #btn-learn{
+        width: 22%;
+        height: 8%;
+        font-size: 15px;
+    }
+    .about-images {
+        max-height: 250px; /* Reduce image size on small screens */
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem; /* Increase gap between cards */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 60vh; /* Reduce hero section height on very small screens */
+    }
+    #hero-title{
+        font-size: 180%;
+    }
+    #hero-subtitle{
+        font-size: 75%;
+    }
+
+    #about-title{
+        font-size: 200%;
+    }
+    #about-subtitle{
+        font-size: 80%;
+    }
+
+    #btn-learn{
+        width: 25%;
+        height: 8%;
+        font-size: 10px;
+    }
+    .about {
+        height: auto; /* Allow the about section to shrink even further */
+    }
+
+    .card-container {
+        gap: 1rem; /* Adjust gap between cards */
+    }
+
+    .card {
+        margin-bottom: 1.5rem; /* Add margin between cards */
+    }
+    .card-text{
+        font-size: 14px;
+    }
+}
+
+.card-container{
     width: 100%;
-    height: 63px;
-    background-color: #222831;
-    border-bottom: 6px solid #393E46;
     display: flex;
+    justify-content: space-around;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    gap: 1rem;
+    z-index: 1;
 }
 
-.title-container{
-    width: 50%;
-    height: 100%;
+.exercises{
+    height: 50vh;
+    width: 100%;
+    z-index: 1;
     display: flex;
-    justify-content: left;
-    align-items: center;
-    color: #EEEEEE;
-    font-size: 15px;
-    
-}
-
-#title{
-    margin: 0;
-    margin-left: 10px;
-
-}
-
-.nav{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-}
-
-.links{
-    width: 70%;
-    height: 100%;
-    background-color: blueviolet;
-}
-
-.acc-container{
-    width: 30%;
-    height: 100%;
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.login-container{
-    width: 45%;
-    height: 100%;
+.container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-.divider-container{
-    width: 10%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.signup-container{
-    width: 45%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.Btn{
-    border: none;
-    border-radius: 8%;
-    width: 70px;
-    height: 30px;
-    transition: width 0.5s, height 0.5s, border-radius 0.5s;
-    color: #EEEEEE;
-    font-size: 15px;
-    font-family: parkinsans;
-    overflow: hidden;
-    background-color: #222831;
-
-}
-
-.Btn:hover{
-    width: 75px;
-    height: 35px;
-    border-radius: 8%;
-    cursor: pointer;
-    background-color: #00ADB5;
-
-}
-
-.divider-container{
-    width: 10%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-

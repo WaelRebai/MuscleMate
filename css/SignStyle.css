@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #000000, #323232);
+    overflow: hidden;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  
+.parent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    position: relative;
+    width: 380px;
+    height: 520px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+    z-index: 1;
+    
+}
+
+.form-box{
+    border-radius: 15px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #202020;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+form{
+    width: 100%;
+}
+
+.container h1{
+    font-size: 36px;
+    margin: -10px 0;
+}
+
+.input-box{
+    position: relative;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    padding: 13px 50px 13px 20px;
+    background: #eee;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+.input-box input::placeholder{
+    color: #888;
+    font-weight: 400;
+}
+
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #888;
+}
+
+.forgot-link{
+    margin: -15px 0 15px;
+}
+
+.forgot-link a{
+    font-size: 14.5px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.btn{
+    width: 100%;
+    height: 48px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    border: 1px solid #202020;
+    cursor: pointer;
+    font-size: 16px;
+    color: #202020;
+    font-weight: 600;
+}
+
+.container p{
+    font-size: 14.5px;
+    margin: 15px 0;
+}
+
+.social-icons a{
+    display: inline-flex;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    background-color: #fff;
+    margin: 0 8px;
+}
+
+.parent{
+    height: 100%;
+    width: 100%;
+}
+
+.ball {
+    width: 6px;
+    height: 6px;
+    left: 50%;
+    top: 50%;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255,255,255,0.1),0 0 0 8px rgba(255,255,255,0.1),0 0 20px rgba(255,255,255,0.1);
+    position: relative;
+    animation: move-star 7s linear infinite;
+    z-index: 0;
+}
+
+.ball::before{
+  content:'';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg,#fff,transparent);
+}
+
+@keyframes move-star {
+  0%
+    {
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+    70%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        transform: rotate(315deg) translateX(-1100px);
+        opacity: 0;
+    }
+}
+
+.ball:nth-child(1) {
+    top: 0%;
+    left: 20%;
+    animation-duration: 4s;
+}
+  
+.ball:nth-child(2) {
+    top: 0%;
+    left: -70%;
+    animation-duration: 5s;
+}
+  
+.ball:nth-child(3) {
+    top: 0%;
+    left: 40%;
+    animation-duration: 6s;
+}
+  
+.ball:nth-child(4) {
+    top: 0%;
+    left: -10%;
+    animation-duration: 3.5s;
+}
+  
+.ball:nth-child(5) {
+    top: 0%;
+    left: 80%;
+    animation-duration: 4.5s;
+}
+  
+.ball:nth-child(6) {
+    top: 0%;
+    left: -30%;
+    animation-duration: 5.5s;
+}
+  
+.ball:nth-child(7) {
+    top: 0%;
+    left: 50%;
+    animation-duration: 3s;
+}
+  
+.ball:nth-child(8) {
+    top: 0%;
+    left: -60%;
+    animation-duration: 4s;
+}
+  
+.ball:nth-child(9) {
+    top: 0%;
+    left: 70%;
+    animation-duration: 5s;
+}
+  
+.ball:nth-child(10) {
+    top: 0%;
+    left: 90%;
+    animation-duration: 6s;
+}
+  
+.ball:nth-child(11) {
+    top: 0%;
+    left: -20%;
+    animation-duration: 3.5s;
+}
+  
+.ball:nth-child(12) {
+    top: 0%;
+    left: 40%;
+    animation-duration: 4.5s;
+}
+  
+.ball:nth-child(13) {
+    top: 0%;
+    left: 80%;
+    animation-duration: 5.5s;
+}
+  
+.ball:nth-child(14) {
+    top: 0%;
+    left: -10%;
+    animation-duration: 3s;
+}
+  
+.ball:nth-child(15) {
+    top: 0%;
+    left: -30%;
+    animation-duration: 15s;
+}
