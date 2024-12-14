@@ -21,7 +21,7 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
   }
   
 .parent{
@@ -34,11 +34,13 @@ html, body {
     position: relative;
     width: 380px;
     height: 520px;
-    background: #fff;
+    background: transparent;
     border-radius: 16px;
     box-shadow: 0 0 30px rgba(0, 0, 0, .2);
     z-index: 1;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 
 .form-box{
@@ -118,6 +120,19 @@ form{
     font-weight: 600;
 }
 
+.btn:hover{
+    background-color: #D3D4D5;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+#icons:hover{
+    background-color: #D3D4D5;
+    color: #fff;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
 .container p{
     font-size: 14.5px;
     margin: 15px 0;
@@ -135,8 +150,103 @@ form{
     margin: 0 8px;
 }
 
+#signup, #signin{
+    color: #ccc;
+    text-decoration: none;
+}
+
+.form-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-in-out, visibility 0s 0.6s, transform 0.6s ease-in-out;
+}
+
+.form-box.active {
+    opacity: 1;
+    visibility: visible; 
+    transform: translateY(0);
+    z-index: 1;
+    transition: opacity 0.6s ease-in-out, visibility 0s 0s, transform 0.6s ease-in-out;
+}
+
+.form-box:not(.active) {
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid red;
+    border-radius: 4px;
+    background-color: #f8d7da;
+}
+
+.error-animation {
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0% { transform: translateX(-10px); }
+    25% { transform: translateX(10px); }
+    50% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+.container{
+    margin-right: 100px !important;
+}
+
+@media (max-width: 1170px) {
+    .container{
+        margin-right: 100px !important;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    
+    .container{
+        margin-right: 0px !important;
+        height: 1vh !important;
+        background-color: transparent !important;
+        
+    }
+
+    .parent{
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-direction: column-reverse;
+    }   
+
+}
+
+
+
+
+
+
+/* stars anim */
+
 .parent{
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
     width: 100%;
 }
 

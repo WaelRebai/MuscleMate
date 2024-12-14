@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="../css/SignStyle.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <title>MuscleMate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+</head>
 </head>
 <body>
     <div class="parent">
@@ -24,26 +28,29 @@
         <div class="ball"></div>
         <div class="ball"></div>
         <div class="ball"></div>
-        <div class="container">
-            <div class="form-box login">
+        <section class="container">
+            <div class="form-box login active">
                 <form action="">
                     <h1>Login</h1>
                     <div class="input-box">
-                        <input type="text" placeholder="Username" required>
+                        <input type="text" id="usernamelog" placeholder="Username" required>
                         <i class='bx bxs-user'></i>
                     </div>
                     <div class="input-box">
-                        <input type="password" placeholder="Password" required>
+                        <input type="password" id="passwordlog" placeholder="Password" required>
                         <i class='bx bxs-lock-alt' ></i>
                     </div>
                     <div class="forgot-link"><a href="#">Forgot password?</a></div>
-                    <button type="submit" class="btn">Login</button>
+                    <button href="Muscles.html" class="btn btn-light">Login</button>
+                    <div class="switch-sign">Don't have an account? <a href="#" id="signup">Sign up</a></div>
                     <p>or login with social platforms</p>
                     <div class="social-icons">
-                        <a href="#"><i class='bx bxl-google'></i></a>
-                        <a href="#"><i class='bx bxl-github' ></i></a>
-                        <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                        <a id="icons" href="#"><i class='bx bxl-google'></i></a>
+                        <a id="icons" href="#"><i class='bx bxl-github' ></i></a>
+                        <a id="icons" href="#"><i class='bx bxl-linkedin' ></i></a>
                     </div>
+                    <div class="error-message"></div>
+
                 </form>
             </div>
     
@@ -51,29 +58,32 @@
                 <form action="">
                     <h1>Register</h1>
                     <div class="input-box">
-                        <input type="text" placeholder="Username" required>
+                        <input type="text" id="usernamereg" placeholder="Username" required>
                         <i class='bx bxs-user'></i>
                     </div>
                     <div class="input-box">
-                        <input type="text" placeholder="Email" required>
+                        <input type="text" id="emailreg" placeholder="Email" required>
                         <i class='bx bxs-envelope' ></i>
                     </div>
                     <div class="input-box">
-                        <input type="password" placeholder="Password" required>
+                        <input type="password" id="passwordreg" placeholder="Password" required>
                         <i class='bx bxs-lock-alt' ></i>
                     </div>
                     <button type="submit" class="btn">Register</button>
+                    <div class="switch-sign">Already have an account? <a href="#" id="signin">Sign in</a></div>
                     <p>or Register with social platforms</p>
                     <div class="social-icons">
                         <a href="#"><i class='bx bxl-google'></i></a>
                         <a href="#"><i class='bx bxl-github' ></i></a>
                         <a href="#"><i class='bx bxl-linkedin' ></i></a>
                     </div>
+                    <div class="error-message"></div>
                 </form>
             </div>
-        </div>
+        </section>
     </div>
     
     <script src="../js/SignScript.js"></script>
+    
 </body>
 </html>

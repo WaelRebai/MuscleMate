@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/DashStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Dashboard</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <h6 class="brand-title"><span>Muscle</span>Mate</h6>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Acceuil.html#about">About us</A></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="Contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Sign.html">Survey</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled active">Dashboard</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to Your Health Dashboard</h1>
+        </div>
+
+        <div class="row">
+            <div class="cc col-md-4">
+                <div class="card info-box">
+                    <h3>Personal Information</h3>
+                    <p><strong>Username:</strong> <span id="username"></span></p>
+                    <p><strong>Age:</strong> <span id="age"></span></p>
+                    <p><strong>Height:</strong> <span id="height"></span> cm</p>
+                    <p><strong>Weight:</strong> <span id="weight"></span> kg</p>
+                    <p><strong>Exercise Frequency:</strong> <span id="exerciseFrequency"></span></p>
+                    <p><strong>Sleep Duration:</strong> <span id="sleepDuration"></span> hours</p>
+                    <p><strong>Water Intake:</strong> <span id="waterIntake"></span></p>
+                </div>
+            </div>
+
+            <div class="cc col-md-4">
+                <div class="card info-box">
+                    <h3>BMR Calculation</h3>
+                    <p><strong>BMR:</strong> <span id="bmrValue"></span> kcal/day</p>
+                    <p><strong>Protein Needed:</strong> <span id="proteinValue"></span> grams</p>
+                    <p><strong>Daily Vitamin Recommendations:</strong></p>
+                    <ul>
+                        <li>Vitamin A: 900 mcg</li>
+                        <li>Vitamin C: 90 mg</li>
+                        <li>Vitamin D: 600 IU</li>
+                        <li>Calcium: 1000 mg</li>
+                        <li>Iron: 8 mg</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cc col-md-4">
+                <div class="card info-box goal-card">
+                    <h3>Current Health Goal</h3>
+                    <p><strong>Goal:</strong><span id="goal"></span></p>
+                    <div id="goalDetails"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div id="CaloriesCard">
+            <h2>Weekly Data</h2>
+            <canvas id="weeklyCaloriesChart"></canvas>
+        </div>
+        <div id="ProteinCard">
+            <h2>Weekly Protein Intake</h2>
+            <canvas id="weeklyProteinChart"></canvas>
+        </div>
+    </div>
+
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 MuscleMate. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+    <script src="../js/DashScript.js"></script>
+</body>
+</html>

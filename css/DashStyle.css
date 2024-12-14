@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar{
+    width: 100%;
+}
+
+.brand-title {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #ff6f61;
+    margin-top: 5px;
+}
+
+.brand-title span {
+    color: #ffffff;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 450px !important;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.info-box {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    height: 70vh;
+}
+
+#goaltext{
+    font-size: 15px;}
+
+#CaloriesCard, #ProteinCard {
+    height: 400px !important;
+    width: 50% !important;
+}
+
+#weeklyCaloriesChart, #weeklyProteinChart {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+@media (max-width: 1170px) {
+    #goaltext{
+        font-size: 13.5px !important;
+    }
+    .card-container{
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 50px !important;
+        padding: 0 10px !important;
+        height: 200vh !important;
+    }
+
+    .row{
+        height: 70vh;
+    }
+
+    #CaloriesCard, #ProteinCard {
+        height: auto !important;
+        width: 90% !important;
+        margin: 0 auto !important;
+    }
+
+    canvas{
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 994px) {
+    #goaltext{
+        font-size: 18px !important;
+    }
+
+    .row{
+        display: flex !important;
+        justify-content: center !important;
+        flex-direction: row !important;
+        height: 230vh !important;
+    }
+
+    .cc{
+        width: 100% !important;
+
+    }
+
+    .card-container{
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 50px !important;
+        padding: 0 10px !important;
+        height: 170vh !important;
+    }
+    #CaloriesCard, #ProteinCard {
+        height: auto !important;
+        width: 90% !important;
+        margin: 0 auto !important;
+    }
+
+    canvas{
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #goaltext{
+        font-size: 18px !important;
+        text-align: center !important;
+    }
+    .card-container{
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 50px !important;
+        padding: 0 10px !important;
+        height: 130vh !important;
+    }
+    #CaloriesCard, #ProteinCard {
+        height: auto !important;
+        width: 90% !important;
+        margin: 0 auto !important;
+    }
+
+    canvas{
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #goaltext{
+        font-size: 15px !important;
+        text-align: center !important;
+    }
+    .card-container{
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 50px !important;
+        padding: 0 10px !important;
+        height: 100vh !important;
+    }
+    #CaloriesCard, #ProteinCard {
+        height: auto !important;
+        width: 90% !important;
+        margin: 0 auto !important;
+    }
+
+    canvas{
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}

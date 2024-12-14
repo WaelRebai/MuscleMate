@@ -45,9 +45,6 @@
     box-sizing: border-box;
 }
 
-
-
-
 .about-images{
     width: 100%;
     max-height: 450px;
@@ -61,7 +58,7 @@
 .card {
     flex: 1 1 22%;
     position: relative;
-    border: 4px solid transparent; /* Initial border color */
+    border: 4px solid transparent; 
     transition: transform 0.6s ease-in;
     overflow: hidden;
 
@@ -109,12 +106,12 @@
 
 @media (max-width: 992px) {
     .card {
-        flex: 1 1 45% !important; /* Cards take up 45% of the container on medium screens */
+        flex: 1 1 45% !important;
         width: 70% !important;
     }
 
     .about {
-        height: auto !important; /* Allow the about section to shrink on smaller screens */
+        height: auto !important;
     }
     #hero-title{
         font-size: 250%;
@@ -132,15 +129,15 @@
     .muscles-card {
         width: 100% !important;
         display: flex !important;
-        justify-content: center !important; /* Center cards */
-        flex-direction: column !important; /* Stack cards vertically */
-        align-items: center !important; /* Cards take full width on medium screens */
+        justify-content: center !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
 
     .card-container {
         display: flex !important;
-        justify-content: center !important; /* Center cards */
-        flex-direction: column !important; /* Stack cards vertically */
+        justify-content: center !important;
+        flex-direction: column !important;
         align-items: center !important;
         
     }
@@ -148,7 +145,7 @@
 
 @media (max-width: 768px) {
     .card {
-        flex: 1 1 100%; /* Cards take full width on small screens */
+        flex: 1 1 100%;
         width: 70% !important;
     }
     #hero-title{
@@ -171,21 +168,21 @@
         font-size: 15px;
     }
     .about-images {
-        max-height: 250px; /* Reduce image size on small screens */
+        max-height: 250px; 
     }
 
     .card-container {
         display: flex;
-        flex-direction: column; /* Stack cards vertically */
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 1.5rem; /* Increase gap between cards */
+        gap: 1.5rem; 
     }
 }
 
 @media (max-width: 480px) {
     .hero {
-        height: 60vh; /* Reduce hero section height on very small screens */
+        height: 60vh;
     }
     #hero-title{
         font-size: 180%;
@@ -207,15 +204,15 @@
         font-size: 10px;
     }
     .about {
-        height: auto; /* Allow the about section to shrink even further */
+        height: auto;
     }
 
     .card-container {
-        gap: 1rem; /* Adjust gap between cards */
+        gap: 1rem;
     }
 
     .card {
-        margin-bottom: 1.5rem; /* Add margin between cards */
+        margin-bottom: 1.5rem;
     }
     .card-text{
         font-size: 14px;
